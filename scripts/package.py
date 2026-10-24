@@ -96,6 +96,7 @@ for formula in ("libusb", "squashfs", "lzo", "lz4", "xz", "zstd"):
         "source": info["urls"]["stable"], "license": info["license"],
     }, indent=2) + "\n")
 shutil.copy2(ROOT / "THIRD_PARTY.md", contents / "Resources" / "THIRD_PARTY.md")
+shutil.copy2(ROOT / "LICENSE", contents / "Resources" / "LICENSE")
 shutil.copytree(ROOT / "Licenses", licenses / "References")
 
 for binary in [*frameworks.iterdir(), tools / "unsquashfs", tools / "mksquashfs", bluetooth_proxy, executable]:

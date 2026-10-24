@@ -1,5 +1,7 @@
 # 小爱工作台
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 面向小爱音箱 Pro（LX06）、原版固件 1.94.13 的本地 macOS 图形工具。
 当前构建针对 Apple Silicon、macOS 27。开发预览版本为 0.2.0。
 
@@ -197,6 +199,20 @@ dist/XiaoaiWorkbench.app/Contents/MacOS/XiaoaiWorkbench --self-check \
 - `Tests/XiaoaiCoreTests`：协议和操作边界测试。
 
 上游来源、协议参考和随包许可证见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
+## 许可证与致谢
+
+本项目自行编写的代码、脚本和文档采用 [MIT License](LICENSE)，Copyright (c) 2026 iamsyc。
+第三方代码、工具、库及固件保留各自的版权和许可证。
+
+感谢 [idootop/open-xiaoai](https://github.com/idootop/open-xiaoai)、
+[superna9999/pyamlboot](https://github.com/superna9999/pyamlboot)、
+[duhow/xiaoai-patch](https://github.com/duhow/xiaoai-patch)、
+[yangfl/amlogic-update](https://github.com/yangfl/amlogic-update)、
+[khadas/u-boot](https://github.com/khadas/u-boot) 和
+[BlueZ](https://github.com/bluez/bluez) 提供的固件工作流、协议及诊断参考。
+应用还使用 libusb、SquashFS Tools、LZO、LZ4、XZ/liblzma 和 Zstandard。
+具体用途、参考版本、分发方式及许可信息见 [第三方来源与许可](THIRD_PARTY.md)。
 
 ## Wi-Fi OTA 与蓝牙备用
 

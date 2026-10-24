@@ -28,7 +28,7 @@
 | [XZ / liblzma](https://github.com/tukaani-project/xz) | 5.8.4 | 打包 liblzma 动态库。 | liblzma 为 0BSD；XZ 包中其他文件的许可见其 COPYING。 |
 | [Zstandard](https://github.com/facebook/zstd) | 1.5.7（Homebrew revision 1） | SquashFS 工具的压缩动态库依赖。 | 主库 BSD-3-Clause OR GPL-2.0-only；包内其他材料还含 BSD-2-Clause、MIT，详见随包声明。 |
 
-`scripts/package.py` 从本机 Homebrew 安装中收集可执行文件和动态库，重定位依赖路径并签名，不修改这些组件的源代码。动态库保留为可替换文件，替换后可重新签名。
+`scripts/package.py` 从本机 Homebrew 安装中收集可执行文件和动态库，重定位依赖路径并签名。组件采用 Homebrew 的构建配方及其补丁；0.2.0 的 SquashFS 配方含 Darwin `struct stat` 字段修复。动态库保留为可替换文件，替换后可重新签名。
 
 更新后的打包脚本会在应用包中包含：
 
@@ -38,7 +38,7 @@
 - `Contents/Resources/Licenses/<formula>/`：组件自带的 COPYING、LICENSE、AUTHORS 等文件。
 - 各组件的 `SOURCE.json`：构建时版本、上游源码归档 URL、归档校验值和 Homebrew 许可元数据。
 
-本仓库目前分发源码，`dist/` 不提交。分发应用二进制时，第三方组件仍按其各自条款提供相应许可及所需源码材料；本项目 MIT 许可不替代这些要求。
+Git 仓库保存项目源码，`dist/` 不提交。GitHub Release 提供应用压缩包及 `XiaoaiWorkbench-0.2.0-ThirdPartySources.tar.gz`，后者包含对应的上游源码归档、许可声明、Homebrew 配方及使用的补丁。组件构建步骤见归档内的 README、INSTALL 和配方，应用打包及动态库路径调整步骤见本项目 `scripts/package.py`。第三方组件继续适用各自条款。
 
 ## 系统工具与开发工具
 

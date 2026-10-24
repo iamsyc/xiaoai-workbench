@@ -8,6 +8,17 @@
 应用集中完成 USB 检测、system0 备份、最小固件制作、分区写入与读回校验、
 启动项保存、SSH root 验证，以及从本机备份恢复。无线升级支持 Wi-Fi 和蓝牙，提供双槽位备份、试启动确认及回退。
 
+## 下载 macOS 应用
+
+在 [v0.2.0 Release](https://github.com/iamsyc/xiaoai-workbench/releases/tag/v0.2.0) 下载
+`XiaoaiWorkbench-0.2.0-macos-arm64.zip`，解压后将 `XiaoaiWorkbench.app` 拖入「应用程序」。
+此预览版要求 Apple Silicon 和 macOS 27 或更高版本，运行时无需安装 Homebrew 或 Python。
+
+应用使用 Apple Development 签名，尚未经过 Apple 公证。首次打开若提示无法验证开发者，
+确认下载来源后，可按 [Apple 官方说明](https://support.apple.com/zh-cn/102445) 在「系统设置 → 隐私与安全性」中选择「仍要打开」。
+使用无线功能时，按系统提示允许本地网络和蓝牙访问。
+Release 同时提供 SHA-256 校验文件及第三方组件对应源码包。
+
 ## 首次使用需要拆机
 
 **首次 USB 解锁、备份和刷机，需要拆开音箱外壳，使用支持数据传输的 Micro USB 线，将主板内部用于调试和刷机的 USB 接口连接到 Mac。** 音箱电源线需要单独连接；仅接通电源无法进行 USB 检测和刷写。
